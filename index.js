@@ -11,38 +11,29 @@ function newImage( url, left, bottom){
       
 }
 
-Invoke.newImage = ('assets/green-character.gif', '100px', '100px');
-Invoke.newImage = ('assets/pine-tree.png', '450px', '200px');
-Invoke.newImage = ('assets/tree.png', ' 200px', '300px');
-Invoke.newImage = ('assets/pillar.png', '350px', '100px');
-Invoke.newImage = ('assets/crate.png', '150px', '425px');
-Invoke.newImage = ('assets/well.png', '150px', '425px');
+let item1 = newImage('assets/green-character.gif', '100px', '100px');
+let item2 = newImage('assets/pine-tree.png', '450px', '200px');
+let item3 = newImage('assets/tree.png', ' 200px', '300px');
+let item4 = newImage('assets/pillar.png', '350px', '100px');
+let item5 = newImage('assets/crate.png', '150px', '425px');
+let item6 = newImage('assets/well.png', '150px', '425px');
 
-Invoke.newImage = ('assets/sword.png', '500px', '405px');
-Invoke.newImage = ('assets/shield.png', '165px','185px');
-Invoke.newImage = ('assets/staff.png','600px', '100px');
+let item7 = newImage('assets/sword.png', '500px', '405px');
+let item8 = newImage('assets/shield.png', '165px','185px');
+let item9 = newImage('assets/staff.png','600px', '100px');
 
-function newItem(url, left, bottom){
-    let item = newImage(url, left, bottom)
-
-    function newItem(url, left, bottom){
-    let item = newImage(url, left, bottom){
-        function newItem(url, left, bottom){
-            let newItem = newImage(url, left, bottom)
-            item.addEventListener('dblclick', function(){
-            })
-
-        function newItem(url, left, bottom){
-            let item = newImage(url, left, bottom)
-            item.addEventListener('dblclick', function(){
-            console.log(item)           
-                })
-            }
-            
-        }
-         
-    }
-    }
-    
+function newItem(item) {
+    item.addEventListener('dblclick', function () {
+        console.log(item);
+    });
+    newItem(item1);
+newItem(item2);
+newItem(item3);
+newItem(item4);
+newItem(item5);
+newItem(item6);
+newItem(item7);
+newItem(item8);
+newItem(item9);
 }
-
+         

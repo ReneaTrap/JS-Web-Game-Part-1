@@ -1,39 +1,35 @@
 //create function for images
-function newImage( url, left, bottom){
 
-    let imgElement = document.createElement('img')
-    imgElement.src = url
-    imgElement.style.position = 'fixed'
-    imgElement.style.left + "px"
-    imgElement.style.bottom + "px"
-    document.body.append(imgElement);
-    return imgElement
-      
+function newImage(assets, left, bottom) {
+    let image = document.createElement('img')
+    image.src = assets
+    image.style.position = 'fixed'
+    image.style.left = left + 'px'
+    image.style.bottom = bottom + 'px'
+    document.body.append(image);
 }
 
-let character = newImage('assets/green-character.gif', '100px', '100px');
-let pinetree = newImage('assets/pine-tree.png', '450px', '200px');
-let tree = newImage('assets/tree.png', '200px', '300px');
-let pillar = newImage('assets/pillar.png', '350px', '100px');
-let crate = newImage('assets/crate.png', '150px', '425px');
-let well = newImage('assets/well.png', '150px', '425px');
+//Add all images to page
+newImage('assets/green-character.gif', 100, 100)
+newImage('assets/pine-tree.png', 450, 200)
+newImage('assets/tree.png', 200, 300)
+newImage('assets/pillar.png', 350, 100)
+newImage('assets/crate.png', 150, 425)
+newImage('assets/well.png', 150, 425)
 
-let sword = newImage('assets/sword.png', '500px', '405px');
-let shield = newImage('assets/shield.png', '165px','185px');
-let staff = newImage('assets/staff.png', '600px', '100px');
+newImage('assets/shield.png', 165,185)
+newImage('assets/staff.png', 600, 100)
 
-function newItem(item) {
-    item.addEventListener('dblclick', function () {
-        console.log(item);
-    });
-}
+//Add sword to the page
+//create a function for sword for double click
 
-newItem(character);
-newItem(pinetree);
-newItem(tree);
-newItem(pillar);
-newItem(crate);
-newItem(well);
-newItem(sword);
-newItem(shield);
-newItem(staff);
+let sword = document.createElement('img')
+sword.src = 'assets/sword.png'
+sword.position = 'fixed'
+sword.left = '500px'
+sword.bottom = '405px'
+document.body.append(sword)
+
+sword.addEventListener('click', function(){
+    sword.remove()
+})
